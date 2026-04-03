@@ -398,6 +398,58 @@
     }
 
     /* ============================================================
+       JOURNÉE DE STAGE & NOTIONS
+    ============================================================ */
+    .journee-timeline { display: flex; flex-direction: column; gap: 0; }
+    .journee-item {
+      display: grid;
+      grid-template-columns: 70px 1fr;
+      gap: 1rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+    }
+    .journee-item:last-child { border-bottom: none; }
+    .journee-time {
+      font-family: var(--font-head);
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--accent);
+      padding-top: 0.15rem;
+      white-space: nowrap;
+    }
+    .journee-titre {
+      font-weight: 600;
+      color: var(--white);
+      font-size: 0.92rem;
+      margin-bottom: 0.35rem;
+    }
+    .journee-content p {
+      color: var(--muted);
+      font-size: 0.87rem;
+      line-height: 1.6;
+    }
+    .journee-content code {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 0.1rem 0.4rem;
+      font-size: 0.82rem;
+      color: var(--accent);
+      font-family: monospace;
+    }
+
+    .notion-card { display: flex; flex-direction: column; gap: 0.6rem; }
+    .notion-icon { font-size: 1.6rem; }
+    .notion-titre {
+      font-family: var(--font-head);
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--white);
+    }
+    .notion-card p { color: var(--muted); font-size: 0.85rem; line-height: 1.6; }
+
+    /* ============================================================
        CV
     ============================================================ */
     .cv-wrapper {
@@ -630,6 +682,27 @@
       <div class="section-label">Qui suis-je ?</div>
       <h2 class="section-title">À propos de moi</h2>
 
+      <!-- Bloc explication BTS SIO -->
+      <div class="card" style="margin-bottom:2.5rem; background: rgba(167,139,250,0.06); border-color: rgba(167,139,250,0.2);">
+        <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.75rem;">
+          <span style="font-size:1.4rem;">🎓</span>
+          <span style="font-family:var(--font-head); font-size:1rem; font-weight:700; color:var(--white);">C'est quoi le BTS SIO ?</span>
+        </div>
+        <p style="color:var(--muted); font-size:0.9rem; margin-bottom:0.75rem;">
+          Le <strong style="color:var(--white);">BTS SIO</strong> (Services Informatiques aux Organisations) est un diplôme de niveau Bac+2 qui forme aux métiers de l'informatique en entreprise. Il propose deux spécialités :
+        </p>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-top:0.5rem;">
+          <div style="padding:0.9rem 1rem; background:var(--bg); border:1px solid var(--border); border-radius:8px;">
+            <div style="font-size:0.8rem; font-weight:700; color:var(--muted); text-transform:uppercase; letter-spacing:1px; margin-bottom:0.3rem;">SLAM</div>
+            <div style="font-size:0.85rem; color:var(--muted);">Solutions Logicielles et Applications Métiers — orienté développement logiciel</div>
+          </div>
+          <div style="padding:0.9rem 1rem; background:rgba(79,142,247,0.08); border:1px solid rgba(79,142,247,0.3); border-radius:8px;">
+            <div style="font-size:0.8rem; font-weight:700; color:var(--accent); text-transform:uppercase; letter-spacing:1px; margin-bottom:0.3rem;">SISR ← ma spécialité</div>
+            <div style="font-size:0.85rem; color:var(--muted);">Solutions d'Infrastructure, Systèmes et Réseaux — administration des serveurs, réseaux et sécurité</div>
+          </div>
+        </div>
+      </div>
+
       <!-- Intro + infos rapides -->
       <div class="apropos-grid" style="margin-bottom:3rem;">
         <div class="apropos-text">
@@ -854,6 +927,130 @@
           <span class="tag">Diagnostic réseau</span>
         </div>
       </div>
+
+      <!-- JOURNÉE EXEMPLAIRE -->
+      <div style="margin-top:2.5rem;">
+        <div class="section-label" style="margin-bottom:1rem;">Exemple de journée en stage</div>
+        <div class="card">
+          <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:1.5rem;">
+            <span style="font-size:1.3rem;">📅</span>
+            <div>
+              <div style="font-family:var(--font-head); font-weight:700; color:var(--white); font-size:1rem;">Mardi — Semaine 3 de stage</div>
+              <div style="color:var(--muted); font-size:0.82rem;">Asperger Aide France · Alfortville</div>
+            </div>
+          </div>
+
+          <div class="journee-timeline">
+
+            <div class="journee-item">
+              <div class="journee-time">9h00</div>
+              <div class="journee-content">
+                <div class="journee-titre">Arrivée et point du matin</div>
+                <p>Arrivée au bureau, lecture des emails et vérification des éventuelles remontées de problèmes de la veille. Ce matin, une employée signale que son poste ne s'allume plus depuis le matin.</p>
+              </div>
+            </div>
+
+            <div class="journee-item">
+              <div class="journee-time">9h30</div>
+              <div class="journee-content">
+                <div class="journee-titre">Diagnostic panne poste utilisateur</div>
+                <p>Je me rends auprès de l'utilisatrice. Premier diagnostic visuel : le câble d'alimentation est bien branché, le voyant de l'écran est allumé. Je teste avec un autre câble d'alimentation — le poste redémarre. Cause identifiée : câble d'alimentation défectueux. Remplacement effectué et bon fonctionnement vérifié.</p>
+                <div class="tags" style="margin-top:0.6rem;"><span class="tag">Diagnostic matériel</span><span class="tag">Dépannage niveau 1</span></div>
+              </div>
+            </div>
+
+            <div class="journee-item">
+              <div class="journee-time">10h30</div>
+              <div class="journee-content">
+                <div class="journee-titre">Configuration d'un nouveau poste</div>
+                <p>Installation d'un poste Windows 11 neuf pour un nouveau salarié. Étapes réalisées : installation de l'OS, création du compte utilisateur local, configuration de l'adresse IP statique selon le plan d'adressage du réseau de l'association, installation des logiciels nécessaires (Office, navigateur, antivirus).</p>
+                <div class="tags" style="margin-top:0.6rem;"><span class="tag">Windows 11</span><span class="tag">IP statique</span><span class="tag">Office 365</span></div>
+              </div>
+            </div>
+
+            <div class="journee-item">
+              <div class="journee-time">12h30</div>
+              <div class="journee-content">
+                <div class="journee-titre">Pause déjeuner</div>
+                <p>Pause d'une heure.</p>
+              </div>
+            </div>
+
+            <div class="journee-item">
+              <div class="journee-time">13h30</div>
+              <div class="journee-content">
+                <div class="journee-titre">Problème de connexion Internet signalé</div>
+                <p>Deux postes ne parviennent plus à accéder à Internet. J'exécute <code>ipconfig</code> pour vérifier la configuration réseau — les postes ont des adresses en 169.254.x.x (APIPA), ce qui indique que le serveur DHCP n'a pas attribué d'adresse. Je vérifie le routeur : un redémarrage suffit à rétablir la connexion. Les postes récupèrent une adresse valide.</p>
+                <div class="tags" style="margin-top:0.6rem;"><span class="tag">ipconfig</span><span class="tag">DHCP</span><span class="tag">Diagnostic réseau</span></div>
+              </div>
+            </div>
+
+            <div class="journee-item">
+              <div class="journee-time">15h00</div>
+              <div class="journee-content">
+                <div class="journee-titre">Vérification du parc informatique</div>
+                <p>Inventaire visuel des postes de l'association : vérification de l'état des câbles réseau, des prises RJ45 et des connectiques. Mise à jour du tableau de suivi du parc (marque, modèle, adresse IP de chaque poste).</p>
+                <div class="tags" style="margin-top:0.6rem;"><span class="tag">Inventaire parc</span><span class="tag">Câblage réseau</span></div>
+              </div>
+            </div>
+
+            <div class="journee-item">
+              <div class="journee-time">16h30</div>
+              <div class="journee-content">
+                <div class="journee-titre">Fin de journée — compte-rendu</div>
+                <p>Rédaction d'un court compte-rendu des interventions de la journée et transmission au responsable. Préparation de la liste des tâches pour le lendemain.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- NOTIONS INFORMATIQUES -->
+      <div style="margin-top:2.5rem;">
+        <div class="section-label" style="margin-bottom:1rem;">Notions informatiques clés</div>
+        <p style="color:var(--muted); font-size:0.92rem; margin-bottom:1.5rem;">Concepts techniques que j'ai mis en pratique lors de mon stage et de mes projets BTS.</p>
+        <div class="grid-3">
+
+          <div class="card notion-card">
+            <div class="notion-icon">🌐</div>
+            <div class="notion-titre">Adresse IP</div>
+            <p>Identifiant numérique unique attribué à chaque équipement sur un réseau. Une adresse IP statique est fixe (configurée manuellement), une adresse dynamique est attribuée automatiquement par un serveur DHCP.</p>
+          </div>
+
+          <div class="card notion-card">
+            <div class="notion-icon">⚙️</div>
+            <div class="notion-titre">DHCP</div>
+            <p>Protocole qui attribue automatiquement une adresse IP aux équipements qui se connectent au réseau. Sans DHCP, chaque poste doit être configuré manuellement. Quand il ne répond plus, les postes obtiennent une adresse APIPA (169.254.x.x).</p>
+          </div>
+
+          <div class="card notion-card">
+            <div class="notion-icon">🔤</div>
+            <div class="notion-titre">DNS</div>
+            <p>Système qui traduit les noms de domaine (ex: google.com) en adresses IP compréhensibles par les machines. C'est l'annuaire d'Internet. Sans DNS, il faudrait connaître l'adresse IP de chaque site.</p>
+          </div>
+
+          <div class="card notion-card">
+            <div class="notion-icon">🏢</div>
+            <div class="notion-titre">Active Directory</div>
+            <p>Service Microsoft qui centralise la gestion des utilisateurs, des ordinateurs et des droits d'accès dans une entreprise. Il permet à un administrateur de gérer depuis un seul serveur tous les comptes et les règles de sécurité du réseau.</p>
+          </div>
+
+          <div class="card notion-card">
+            <div class="notion-icon">🖥️</div>
+            <div class="notion-titre">Virtualisation</div>
+            <p>Technologie qui permet de faire tourner plusieurs systèmes d'exploitation sur une seule machine physique. Un hyperviseur (comme VMware ou Hyper-V) crée des machines virtuelles isolées, utiles pour tester des configurations sans risque.</p>
+          </div>
+
+          <div class="card notion-card">
+            <div class="notion-icon">📋</div>
+            <div class="notion-titre">GPO</div>
+            <p>Stratégies de groupe (Group Policy Objects) dans Active Directory. Elles permettent d'appliquer des règles automatiquement à tous les postes d'un domaine : bloquer l'accès au panneau de configuration, imposer un fond d'écran, désactiver l'USB…</p>
+          </div>
+
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -928,6 +1125,32 @@
       <div class="section-label">Savoir-faire</div>
       <h2 class="section-title">Compétences techniques</h2>
       <p class="section-desc">Compétences acquises lors de ma formation BTS SIO SISR, de mes projets en cours et de mon stage en support informatique.</p>
+
+      <!-- TABLEAU DE SYNTHÈSE E5 -->
+      <div class="card" style="margin-bottom:2.5rem; background: rgba(79,142,247,0.06); border-color: rgba(79,142,247,0.2);">
+        <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
+          <div style="display:flex; align-items:center; gap:0.75rem;">
+            <span style="font-size:1.5rem;">📋</span>
+            <div>
+              <div style="font-family:var(--font-head); font-weight:700; color:var(--white); font-size:1rem;">Tableau de synthèse — Épreuve E5</div>
+              <div style="color:var(--muted); font-size:0.82rem; margin-top:0.2rem;">BTS SIO 2026 · Annexe 8-1 · Réalisations professionnelles</div>
+            </div>
+          </div>
+          <a href="https://drive.google.com/file/d/1MkF9fUH4sLZX0EWws4ZZKywgVp9A6kjl/view?usp=sharing" target="_blank" class="btn btn-primary" style="font-size:0.85rem; padding:0.6rem 1.25rem;">
+            📄 Voir le document
+          </a>
+        </div>
+        <!-- Lecteur PDF intégré -->
+        <div style="margin-top:1.25rem; border-radius:8px; overflow:hidden; border:1px solid var(--border);">
+          <iframe
+            src="https://drive.google.com/file/d/1MkF9fUH4sLZX0EWws4ZZKywgVp9A6kjl/preview"
+            width="100%"
+            height="500px"
+            style="display:block; border:none;"
+            allow="autoplay">
+          </iframe>
+        </div>
+      </div>
 
       <!-- CATÉGORIE 1 : Systèmes & Serveurs -->
       <div class="skills-cat-title" style="margin-bottom:1.25rem;">🖥️ Systèmes & Serveurs</div>

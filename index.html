@@ -653,6 +653,14 @@
       display: block;
       border-radius: 0;
     }
+    .gallery-caption {
+      font-size: 0.72rem;
+      color: var(--muted);
+      line-height: 1.4;
+      padding: 0.5rem 0.6rem;
+      border-top: 1px solid var(--border);
+      text-align: center;
+    }
     /* Lightbox (agrandissement au clic) */
     .lightbox {
       display: none;
@@ -1057,14 +1065,14 @@
           <div class="project-gallery">
             <div class="project-gallery-label">📸 Captures de la réalisation</div>
             <div class="gallery-grid">
-              <div class="gallery-thumb" onclick="openLightbox('ad-1.png')"><img src="ad-1.png" alt="Création du domaine technova.local"/></div>
-              <div class="gallery-thumb" onclick="openLightbox('ad-2.png')"><img src="ad-2.png" alt="Récapitulatif de la configuration"/></div>
-              <div class="gallery-thumb" onclick="openLightbox('ad-3.png')"><img src="ad-3.png" alt="Écran de connexion au domaine TECHNOVA"/></div>
-              <div class="gallery-thumb" onclick="openLightbox('ad-4.png')"><img src="ad-4.png" alt="Unités d'organisation créées"/></div>
-              <div class="gallery-thumb" onclick="openLightbox('ad-5.png')"><img src="ad-5.png" alt="Création d'un utilisateur"/></div>
-              <div class="gallery-thumb" onclick="openLightbox('ad-6.png')"><img src="ad-6.png" alt="Création d'un groupe de sécurité"/></div>
-              <div class="gallery-thumb" onclick="openLightbox('ad-7.png')"><img src="ad-7.png" alt="Création d'une GPO"/></div>
-              <div class="gallery-thumb" onclick="openLightbox('ad-8.png')"><img src="ad-8.png" alt="Stratégie de groupe activée"/></div>
+              <div class="gallery-thumb" onclick="openLightbox('ad-1.png')"><img src="ad-1.png" alt="Création du domaine technova.local"/><div class="gallery-caption">Création du domaine technova.local</div></div>
+              <div class="gallery-thumb" onclick="openLightbox('ad-2.png')"><img src="ad-2.png" alt="Récapitulatif de la configuration"/><div class="gallery-caption">Récapitulatif de la configuration</div></div>
+              <div class="gallery-thumb" onclick="openLightbox('ad-3.png')"><img src="ad-3.png" alt="Écran de connexion au domaine TECHNOVA"/><div class="gallery-caption">Connexion au domaine TECHNOVA</div></div>
+              <div class="gallery-thumb" onclick="openLightbox('ad-4.png')"><img src="ad-4.png" alt="Unités d'organisation créées"/><div class="gallery-caption">Les unités d'organisation créées</div></div>
+              <div class="gallery-thumb" onclick="openLightbox('ad-5.png')"><img src="ad-5.png" alt="Création d'un utilisateur"/><div class="gallery-caption">Création d'un compte utilisateur</div></div>
+              <div class="gallery-thumb" onclick="openLightbox('ad-6.png')"><img src="ad-6.png" alt="Création d'un groupe de sécurité"/><div class="gallery-caption">Création d'un groupe de sécurité</div></div>
+              <div class="gallery-thumb" onclick="openLightbox('ad-7.png')"><img src="ad-7.png" alt="Création d'une GPO"/><div class="gallery-caption">Création d'une GPO</div></div>
+              <div class="gallery-thumb" onclick="openLightbox('ad-8.png')"><img src="ad-8.png" alt="Stratégie de groupe activée"/><div class="gallery-caption">Règle de sécurité GPO activée</div></div>
             </div>
           </div>
         </div>
@@ -1098,12 +1106,12 @@
           <div class="project-gallery">
             <div class="project-gallery-label">📸 Captures de la réalisation</div>
             <div class="gallery-grid">
-              <div class="gallery-thumb" onclick="openLightbox('vlan-1.png')"><img src="vlan-1.png" alt="Topologie du réseau"/></div>
-              <div class="gallery-thumb" onclick="openLightbox('vlan-2.png')"><img src="vlan-2.png" alt="Création des VLAN"/></div>
-              <div class="gallery-thumb" onclick="openLightbox('vlan-3.png')"><img src="vlan-3.png" alt="Affectation des ports aux VLAN"/></div>
-              <div class="gallery-thumb" onclick="openLightbox('vlan-4.png')"><img src="vlan-4.png" alt="Interfaces VLAN et adressage IP"/></div>
-              <div class="gallery-thumb" onclick="openLightbox('vlan-5.png')"><img src="vlan-5.png" alt="Configuration IP d'un poste"/></div>
-              <div class="gallery-thumb" onclick="openLightbox('vlan-6.png')"><img src="vlan-6.png" alt="Tests de connectivité (ping)"/></div>
+              <div class="gallery-thumb" onclick="openLightbox('vlan-1.png')"><img src="vlan-1.png" alt="Topologie du réseau"/><div class="gallery-caption">Topologie du réseau</div></div>
+              <div class="gallery-thumb" onclick="openLightbox('vlan-2.png')"><img src="vlan-2.png" alt="Création des VLAN"/><div class="gallery-caption">Création des trois VLAN</div></div>
+              <div class="gallery-thumb" onclick="openLightbox('vlan-3.png')"><img src="vlan-3.png" alt="Affectation des ports aux VLAN"/><div class="gallery-caption">Affectation des ports aux VLAN</div></div>
+              <div class="gallery-thumb" onclick="openLightbox('vlan-4.png')"><img src="vlan-4.png" alt="Interfaces VLAN et adressage IP"/><div class="gallery-caption">Interfaces VLAN et adressage IP</div></div>
+              <div class="gallery-thumb" onclick="openLightbox('vlan-5.png')"><img src="vlan-5.png" alt="Configuration IP d'un poste"/><div class="gallery-caption">Configuration IP d'un poste</div></div>
+              <div class="gallery-thumb" onclick="openLightbox('vlan-6.png')"><img src="vlan-6.png" alt="Tests de connectivité (ping)"/><div class="gallery-caption">Tests de connectivité (ping)</div></div>
             </div>
           </div>
         </div>

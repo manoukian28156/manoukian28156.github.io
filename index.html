@@ -396,6 +396,16 @@
       font-weight: 600;
       white-space: nowrap;
     }
+    .skill-badge {
+      background: rgba(79,142,247,0.1);
+      border: 1px solid rgba(79,142,247,0.25);
+      color: var(--accent);
+      border-radius: 6px;
+      padding: 0.2rem 0.6rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      white-space: nowrap;
+    }
 
     /* ============================================================
        JOURNÉE DE STAGE & NOTIONS
@@ -553,6 +563,15 @@
       white-space: nowrap;
       text-align: right;
       flex-shrink: 0;
+    }
+
+    /* CV affiché directement en image dans la page */
+    .cv-image {
+      width: 100%;
+      max-width: 850px;
+      margin: 0 auto;
+      display: block;
+      border-radius: 6px;
     }
 
     /* ============================================================
@@ -713,9 +732,9 @@
             la configurer et la sécuriser, c'est ce qui me motive au quotidien.
           </p>
           <p>
-            Au cours de ma formation, j'ai acquis des compétences concrètes :
-            installation de systèmes d'exploitation (Windows, Linux), configuration réseau,
-            administration de serveurs, gestion d'Active Directory et maintenance informatique.
+            Au cours de ma formation, j'ai acquis de nombreuses compétences, par exemple :
+            l'installation de systèmes d'exploitation (Windows, Linux), la configuration réseau,
+            l'administration de serveurs, la gestion d'Active Directory ou encore la maintenance informatique.
           </p>
           <div class="projet-pro">
             <h4>🎯 Projet professionnel</h4>
@@ -738,136 +757,13 @@
         </div>
       </div>
 
-      <!-- CV intégré -->
+      <!-- ============================================================
+           CV — image affichée directement dans la page
+      ============================================================ -->
       <div class="section-label" style="margin-bottom:1rem;">Curriculum Vitae</div>
-      <div class="cv-wrapper">
-
-        <!-- COLONNE GAUCHE -->
-        <div class="cv-left">
-
-          <div class="cv-block">
-            <div class="cv-block-title">Compétences</div>
-            <div class="cv-skill-list">
-              <div class="cv-skill-item"><span class="cv-skill-cat">Systèmes</span><span>Windows, Linux</span></div>
-              <div class="cv-skill-item"><span class="cv-skill-cat">Sécurité</span><span>Pare-feu, VPN, Antivirus</span></div>
-              <div class="cv-skill-item"><span class="cv-skill-cat">Réseaux</span><span>TCP/IP, VLAN, VoIP, Cisco</span></div>
-              <div class="cv-skill-item"><span class="cv-skill-cat">Virtualisation</span><span>VMware, Hyper-V</span></div>
-              <div class="cv-skill-item"><span class="cv-skill-cat">Bases de données</span><span>MySQL, MongoDB</span></div>
-            </div>
-          </div>
-
-          <div class="cv-block">
-            <div class="cv-block-title">Qualités</div>
-            <div style="display:flex; flex-wrap:wrap; gap:0.5rem;">
-              <span class="tag">Rigueur</span>
-              <span class="tag">Esprit d'analyse</span>
-              <span class="tag">Résolution de problèmes</span>
-              <span class="tag">Autonomie</span>
-              <span class="tag">Esprit d'équipe</span>
-              <span class="tag">Sens du service</span>
-            </div>
-          </div>
-
-          <div class="cv-block">
-            <div class="cv-block-title">Langues</div>
-            <div class="cv-skill-list">
-              <div class="cv-skill-item"><span class="cv-skill-cat">Français</span><span>Courant</span></div>
-              <div class="cv-skill-item"><span class="cv-skill-cat">Anglais</span><span>B1 (DNL)</span></div>
-              <div class="cv-skill-item"><span class="cv-skill-cat">Espagnol</span><span>A1</span></div>
-              <div class="cv-skill-item"><span class="cv-skill-cat">Arménien</span><span>Courant</span></div>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- COLONNE DROITE -->
-        <div class="cv-right">
-
-          <div class="cv-accroche">
-            <div class="cv-accroche-title">Recherche alternance — Technicienne support informatique</div>
-            <p>Actuellement à la recherche d'une alternance pour la rentrée de septembre 2026.
-            Passionnée par l'informatique, je suis prête à mobiliser mes compétences au service d'une entreprise.</p>
-          </div>
-
-          <div class="cv-block">
-            <div class="cv-block-title">Expérience professionnelle</div>
-            <div class="cv-exp-item">
-              <div class="cv-exp-header">
-                <div>
-                  <div class="cv-exp-role">Stagiaire – Support informatique</div>
-                  <div class="cv-exp-org">Asperger Aide France · Alfortville</div>
-                </div>
-                <div class="cv-exp-date">06/2025 – 07/2025<br>11/2025 – 12/2025</div>
-              </div>
-              <ul class="mission-list" style="margin-top:0.5rem;">
-                <li>Support utilisateurs (Windows, Office 365)</li>
-                <li>Diagnostic et résolution de pannes</li>
-                <li>Installation et configuration de matériel</li>
-                <li>Gestion du réseau et du parc informatique</li>
-              </ul>
-            </div>
-            <div class="cv-exp-item">
-              <div class="cv-exp-header">
-                <div>
-                  <div class="cv-exp-role">Administratrice sécurité des systèmes <span style="color:var(--accent2); font-size:0.78rem;">(bénévolat)</span></div>
-                  <div class="cv-exp-org">Salon Georges Hobeika · Paris</div>
-                </div>
-                <div class="cv-exp-date">03/2023 – 04/2023</div>
-              </div>
-              <ul class="mission-list" style="margin-top:0.5rem;">
-                <li>Installation de vidéosurveillance</li>
-                <li>Gestion des accès réseau</li>
-                <li>Supervision et maintenance des systèmes</li>
-              </ul>
-            </div>
-            <div class="cv-exp-item">
-              <div class="cv-exp-header">
-                <div>
-                  <div class="cv-exp-role">Stagiaire</div>
-                  <div class="cv-exp-org">Pharmacie Marquet · Alfortville</div>
-                </div>
-                <div class="cv-exp-date">12/2021 – 01/2022</div>
-              </div>
-              <ul class="mission-list" style="margin-top:0.5rem;">
-                <li>Gestion des stocks</li>
-                <li>Préparation de commandes</li>
-                <li>Support aux activités quotidiennes</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="cv-block">
-            <div class="cv-block-title">Formations</div>
-            <div class="cv-exp-item">
-              <div class="cv-exp-header">
-                <div>
-                  <div class="cv-exp-role">BTS SIO – option SISR</div>
-                  <div class="cv-exp-org">INGETIS · Paris</div>
-                </div>
-                <div class="cv-exp-date">09/2024 – En cours</div>
-              </div>
-              <ul class="mission-list" style="margin-top:0.5rem;">
-                <li>Administration des systèmes et des réseaux</li>
-                <li>Installation et configuration des équipements</li>
-              </ul>
-            </div>
-            <div class="cv-exp-item">
-              <div class="cv-exp-header">
-                <div>
-                  <div class="cv-exp-role">Baccalauréat STMG – Mention Assez Bien</div>
-                  <div class="cv-exp-org">Lycée Ensemble Sainte Marie · Créteil</div>
-                </div>
-                <div class="cv-exp-date">09/2022 – 07/2024</div>
-              </div>
-              <ul class="mission-list" style="margin-top:0.5rem;">
-                <li>Spécialité SIG (Systèmes d'Information et de Gestion)</li>
-                <li>Options : DNL Anglais, Cinéma, Espagnol</li>
-              </ul>
-            </div>
-          </div>
-
-        </div>
-      </div>
+      <img src="cv-jeannine.jpg"
+           alt="CV de Jeannine Manoukian — Technicienne Support Informatique"
+           class="cv-image"/>
 
     </div>
   </section>
@@ -883,7 +779,6 @@
         <div class="stage-header">
           <div class="stage-badge">Support informatique</div>
           <div>
-            <!-- ✏️ MODIFIE ICI le nom et lieu de l'entreprise -->
             <div class="stage-org">Asperger Aide France</div>
             <div class="stage-loc">📍 Alfortville</div>
           </div>
@@ -897,7 +792,6 @@
         <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; flex-wrap:wrap;">
           <div>
             <p style="font-size:0.85rem; font-weight:600; color:var(--white); margin-bottom:0.5rem;">Missions réalisées</p>
-            <!-- ✏️ MODIFIE ICI tes missions -->
             <ul class="mission-list">
               <li>Installation et configuration de postes Windows 10 / 11</li>
               <li>Assistance et dépannage utilisateurs</li>
@@ -908,7 +802,6 @@
           </div>
           <div>
             <p style="font-size:0.85rem; font-weight:600; color:var(--white); margin-bottom:0.5rem;">Compétences développées</p>
-            <!-- ✏️ MODIFIE ICI tes compétences acquises -->
             <ul class="mission-list">
               <li>Résolution autonome d'incidents</li>
               <li>Communication avec des utilisateurs non-techniques</li>
@@ -918,7 +811,6 @@
           </div>
         </div>
 
-        <!-- ✏️ MODIFIE ICI les outils utilisés -->
         <div class="tags">
           <span class="tag">Windows 10/11</span>
           <span class="tag">Configuration IP</span>
@@ -1063,7 +955,7 @@
 
       <div class="grid-2">
 
-        <!-- ✏️ PROJET 1 — modifie titre, description, missions et outils -->
+        <!-- PROJET 1 -->
         <div class="card project-card">
           <div>
             <div class="stage-badge" style="display:inline-block; margin-bottom:0.75rem;">Infrastructure réseau</div>
@@ -1090,28 +982,29 @@
           </div>
         </div>
 
-        <!-- ✏️ PROJET 2 — remplace par un vrai 2ème projet si tu en as un, sinon supprime -->
+        <!-- PROJET 2 -->
         <div class="card project-card">
           <div>
-            <div class="stage-badge" style="display:inline-block; margin-bottom:0.75rem;">Administration système</div>
-            <h3>Administration Windows Server</h3>
+            <div class="stage-badge" style="display:inline-block; margin-bottom:0.75rem;">Segmentation réseau</div>
+            <h3>Segmentation d'un réseau avec des VLAN</h3>
           </div>
           <p>
-            Installation et administration d'un serveur Windows Server 2022 dans un environnement virtualisé,
-            avec mise en place de services réseau essentiels.
+            Conception et mise en place d'une architecture réseau segmentée pour une PME,
+            afin de séparer les services et renforcer la sécurité.
           </p>
           <ul class="mission-list">
-            <li>Installation de Windows Server 2022 via hyperviseur</li>
-            <li>Configuration des services DNS et DHCP</li>
-            <li>Gestion des rôles via le Gestionnaire de serveur</li>
-            <li>Utilisation de GLPI pour la gestion des tickets incidents</li>
+            <li>Création de trois VLAN : Direction, Comptabilité, Informatique</li>
+            <li>Configuration sur switch Cisco en ligne de commande</li>
+            <li>Mise en place d'un lien trunk (802.1Q)</li>
+            <li>Routage inter-VLAN pour autoriser les communications nécessaires</li>
+            <li>Intégration de l'Active Directory dans l'architecture VLAN</li>
           </ul>
           <div class="tags">
-            <span class="tag">Windows Server 2022</span>
-            <span class="tag">GLPI</span>
-            <span class="tag">DNS</span>
-            <span class="tag">DHCP</span>
-            <span class="tag">Ticketing</span>
+            <span class="tag">VLAN</span>
+            <span class="tag">Cisco</span>
+            <span class="tag">Trunk 802.1Q</span>
+            <span class="tag">Routage inter-VLAN</span>
+            <span class="tag">Active Directory</span>
           </div>
         </div>
 
@@ -1256,6 +1149,25 @@
 
         <div class="card skill-detail-card">
           <div class="skill-detail-header">
+            <span class="skill-detail-name">VLAN & segmentation réseau</span>
+            <span class="skill-badge">Projet BTS</span>
+          </div>
+          <div class="skill-bar" style="margin:0.6rem 0 0.75rem;"><div class="skill-fill" style="width:65%"></div></div>
+          <p class="skill-detail-desc">
+            Création et configuration de VLAN sur switch Cisco pour segmenter un réseau d'entreprise.
+            Mise en place d'un lien trunk 802.1Q et du routage inter-VLAN afin de séparer les services
+            (Direction, Comptabilité, Informatique) tout en maîtrisant les communications entre eux.
+          </p>
+          <div class="tags" style="margin-top:0.75rem;">
+            <span class="tag">VLAN</span>
+            <span class="tag">Cisco</span>
+            <span class="tag">Trunk 802.1Q</span>
+            <span class="tag">Routage inter-VLAN</span>
+          </div>
+        </div>
+
+        <div class="card skill-detail-card">
+          <div class="skill-detail-header">
             <span class="skill-detail-name">Diagnostic réseau</span>
             <span class="skill-badge stage-badge-green">Stage</span>
           </div>
@@ -1363,7 +1275,6 @@
           <h3>Sites spécialisés</h3>
           <p style="margin-bottom:1rem;">Sources d'information en cybersécurité et informatique que je consulte régulièrement.</p>
           <div style="display:flex; flex-direction:column; gap:0.6rem;">
-            <!-- ✏️ MODIFIE ICI tes liens de sources -->
             <a href="https://www.ssi.gouv.fr" target="_blank" class="veille-link">
               🔗 ANSSI — Agence nationale de la sécurité des SI
             </a>
@@ -1395,7 +1306,6 @@
             🔗 Accéder à Google Alerts
           </a>
           <p style="color:var(--muted); font-size:0.85rem; margin-top:0.75rem;">Mots-clés surveillés :</p>
-          <!-- ✏️ MODIFIE ICI tes mots-clés Google Alerts -->
           <div class="tags" style="margin-top:0.5rem;">
             <span class="tag">cyberattaques</span>
             <span class="tag">sécurité informatique</span>
@@ -1428,5 +1338,10 @@
   <!-- ===== FOOTER ===== -->
   <footer>
     <div class="container">
-      <!-- ✏️ MODIFIE ICI le nom et l'année -->
-      
+      <p><strong>Jeannine Manoukian</strong> — Portfolio BTS SIO SISR · 2026</p>
+      <p style="margin-top:0.4rem;">INGETIS Paris · <a href="https://www.linkedin.com/in/jeannine-manoukian-0b9096338/" target="_blank">LinkedIn</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>
